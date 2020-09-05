@@ -31,21 +31,21 @@
         <!-- <li class="minus">Cash <span>-$400</span> <button class="delete-btn">X</button>  </li> -->
       </ul>
 
-      <h3>Add a new transaction</h3>
+      <h3 id="add-transaction">Add a new transaction</h3>
       <form id="form">
         <div class="form-control">
-          <label for="text">Transaction</label>
+          <label for="text">Transaction description</label>
           <input
             type="text"
             id="text"
-            placedholder="Describe the transaction"
+            placeholder="Describe the transaction"
           />
         </div>
         <div class="form-control">
           <label for="amount"
             >Amount (negative is expense; positive is income</label
           >
-          <input type="number" id="amount" placedholder="Enter amount ..." />
+          <input type="number" id="amount" placeholder="Enter amount ..." />
         </div>
         <button type="submit" class="transaction-btn">Add Transaction</button>
       </form>

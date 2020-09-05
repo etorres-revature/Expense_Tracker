@@ -32,10 +32,36 @@ function addTransactionDOM(tranx) {
   listEl.appendChild(item);
 }
 
+//total income/expense and total balance
+function updateValues() {
+  const amounts = transactions.map((tranx) => tranx.amount);
+  //console.log(amounts)
+
+  const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
+  //console.log(total);
+
+  const income = amounts
+    .filter((item) => item > 0)
+    .reduce((acc, item) => (acc += item), 0)
+    .toFixed(2);
+  //console.log(income);
+
+  const expense = (amounts
+    .filter((items) => items < 0)
+    .reduce((acc, item) => (acc += item), 0) * -1)
+    .toFixed(2);
+  //console.log(expense);
+
+  balanceEl.innerText = `$${total}`;
+  money_plusEl.innerText = `$${income}`;
+  money_minusEl.innerText = `$${expense}`;
+}
+
 //init app
 function initExpenseTrackerApp() {
-    listEl.innerHTML = "";
-    transactions.forEach(addTransactionDOM);
+  listEl.innerHTML = "";
+  transactions.forEach(addTransactionDOM);
+  updateValues();
 }
 
 initExpenseTrackerApp();

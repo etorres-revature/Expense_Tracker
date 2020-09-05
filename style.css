@@ -90,6 +90,7 @@ input[type="number"] {
 }
 
 .transaction-btn {
+    cursor: pointer;
   background-color: #9c88ff;
   box-shadow: var(--box-shadow);
   color: #fff;
@@ -99,6 +100,10 @@ input[type="number"] {
   margin: auto;
   padding: 10px;
   width: 55%;
+}
+
+.transaction-btn:focus, .delete-btn:focus {
+    outline: 0;
 }
 
 .list {
@@ -127,6 +132,7 @@ input[type="number"] {
 }
 
 .delete-btn {
+    cursor: pointer;
     background-color: #e74c3c;
     border: 0;
     color: #fff;

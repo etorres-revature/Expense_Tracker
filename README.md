@@ -1,4 +1,4 @@
-# [Expense_Tracker](https://etorres-revature.github.io/Expense_Tracker/)
+# [Expense Tracker](https://etorres-revature.github.io/Expense_Tracker/)
 
 The [Expense Tracker](https://etorres-revature.github.io/Expense_Tracker/) can be used to track your "Total Balance", "Income", and "Expenses"
 
